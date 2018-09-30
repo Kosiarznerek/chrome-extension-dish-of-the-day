@@ -18,7 +18,7 @@ export function BeautifyDate(date) {
 /**
  * Generates date
  * @param {Date} date Date to format
- * @returns {HTMLElement} 
+ * @returns {HTMLParagraphElement} 
  */
 export function GenerateDate(date) {
     // Creating container

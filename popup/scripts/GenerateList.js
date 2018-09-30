@@ -2,10 +2,9 @@
  * Generates list
  * @param {string} title List title 
  * @param {string[]} data Data to render
- * @returns {HTMLElement}
+ * @returns {HTMLUListElement}
  */
 export function GenerateList(title, data) {
-
     // Holder
     const ul = document.createElement('ul');
     ul.className = 'list-group';
@@ -17,13 +16,13 @@ export function GenerateList(title, data) {
     ul.appendChild(tli);
 
     // Data
-    for (let i = 0; i < data.length; i++) {
+    data.forEach(val => {
         let dli = document.createElement('li');
         dli.className = 'list-group-item';
-        dli.innerText = data[i];
+        dli.innerText = val;
         ul.appendChild(dli);
-    }
+    })
 
-    // Return
+    // Return statement
     return ul;
 }
